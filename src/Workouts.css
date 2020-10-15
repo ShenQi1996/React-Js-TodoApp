@@ -1,0 +1,7 @@
+.All-List {
+  flex-direction: column;
+  border: 10px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
