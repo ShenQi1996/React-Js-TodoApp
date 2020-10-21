@@ -1,13 +1,11 @@
+
 * {
   margin: 0;
   border: 0;
   padding: 0;
-  font-family: "Lemonada", cursive;
+  font-family: 'Oswald', sans-serif;;
 }
 
-form {
-  padding-top: 20px;
-}
 
 .Lists {
   margin-left: 100px;
@@ -27,11 +25,11 @@ form {
   display: flex;
   flex-direction: column;
   align-content: center;
-  background-image: url("https://chitowntrainer.com/wp-content/uploads/2017/09/choose-trainer.jpg");
+  background-image: url("https://toughfitnessdallas.com/wp-content/uploads/2020/07/Dallas-Personal-Trainer-Tough-Fitness-Dallas-1024x683.jpg");
   background-position: center center;
   background-size: cover;
   color: aliceblue;
-  height: 600px;
+  height: 500px;
   object-fit: contain;
   position: relative;
 }
@@ -51,13 +49,11 @@ form {
   background: linear-gradient(
     180deg,
     transparent,
-    rgba(37, 37, 37, 0.61),
+    rgba(19, 19, 19, 0.61),
     #111
   );
-  bottom: 0;
 }
 /* Header Page */
-
 /* Footer Page */
 footer {
   padding-bottom: 20px;
@@ -69,14 +65,44 @@ footer {
 
 /* Footer Page */
 /* Body Page */
-body {
+.tbody {
+  background-color: #111;
+  padding: 50px;
+  overflow: hidden;
 }
 .profile {
-  margin-left: 100px;
-  margin-right: 100px;
+  background-image: linear-gradient(to left, #111,  rgba(150, 148, 148, 0.61) 25%,rgba(150, 148, 148, 0.61) 75%, #111 100%);
+  background-repeat: no-repeat;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .profile img {
   width: 200px;
   height: 220px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tform{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.calendar{
+  margin-top: 50px;
+  height: 200px;
+  background: url("./images/hiclipart.com.png");
+  margin-left: 180px;
+  margin-right: 180px;
+  background-size: cover;
+  background-position: center center;
+    height: 700px;
+  object-fit: contain;
+  position: relative;
+  
+}
+
+.CalendarB{
+
 }
 /* Body Page */

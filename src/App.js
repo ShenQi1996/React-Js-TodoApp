@@ -61,19 +61,21 @@ function App() {
         </div>
         <div className="shadow" />
       </header>
-
-      <body>
+      <body className="tbody">
         <div className="profile">
-          <h1> About Me</h1>
+          <h1> Inspirational quote</h1>
           <img classNam="Pimg" src={profil} />
           <p>
             Of course it’s hard. It’s supposed to be hard. If it were easy,
             everybody would do it. Hard is what makes it great.
           </p>
         </div>
+        <div className="calendar"> 
+        </div>
+        <div className="CalendarB"/>
       </body>
 
-      <form>
+      <form className="tform">
         {/**Need to put inside form for the button to submit to back-end */}
 
         <FormControl className="Fcontrol">
