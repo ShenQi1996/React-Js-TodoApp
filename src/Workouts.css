@@ -1,7 +1,23 @@
 .All-List {
-  flex-direction: column;
-  border: 10px solid black;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  word-break: break-all;
+  background-color: #b9b5b5;
+  border-style: groove;
+  margin-bottom: 10px !important;
+  transition: 1s;
+  border-radius: 10px;
+}
+
+.L-Button {
+  margin-bottom: 10px !important;
+  margin-right: 10px !important;
+}
+
+.All-List:hover {
+  transform: scale(1.05, 1.05);
+  border-radius: 10px 50px;
+  background-color: #928d8d;
 }

@@ -1,16 +1,27 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase";
 import "./App.css";
-import { Button, FormControl, Input, InputLabel } from "@material-ui/core";
+import {
+  Button,
+  FormControl,
+  Input,
+  InputLabel,
+  IconButton,
+} from "@material-ui/core";
 import Workouts from "./Workouts";
 import db from "./firebase";
+import GetDate from "./GetDate";
+
+import ScrollToTop from "./ScrollToTop";
+
+import profil from "./images/profil.svg";
 
 function App() {
   const [todos, setToDos] = useState([]);
   const [input, setInput] = useState("");
 
   const [dl, setDl] = useState([]); //TEST
-  const doDate = "  ⌛  Do-Date: ";
+  const doDate = "  ⌛ Sets: ";
 
   // when the app runs. it will check if we have workouts or not in the todo list.
   //useEffect ---> run once when the app loaded .
@@ -43,12 +54,29 @@ function App() {
 
   return (
     <div className="App">
-      <h1>🏋️‍♀️ Workouts</h1>
+      <header className="frontP">
+        <div>
+          <h1>Personal Trainer </h1>
+          <p>Looking for Workouts never been that easy!!</p>
+        </div>
+        <div className="shadow" />
+      </header>
+
+      <body>
+        <div className="profile">
+          <h1> About Me</h1>
+          <img classNam="Pimg" src={profil} />
+          <p>
+            Of course it’s hard. It’s supposed to be hard. If it were easy,
+            everybody would do it. Hard is what makes it great.
+          </p>
+        </div>
+      </body>
 
       <form>
         {/**Need to put inside form for the button to submit to back-end */}
 
-        <FormControl>
+        <FormControl className="Fcontrol">
           <InputLabel>🤸‍♀️Write your Workouts </InputLabel>
           <Input
             value={input}
@@ -56,29 +84,37 @@ function App() {
           />
         </FormControl>
 
-        <FormControl>
+        <FormControl className="Fcontrol">
           {/**TEST*/}
-          <InputLabel>⏲ Write your Deadline </InputLabel>
+          <InputLabel>⏲Sets: </InputLabel>
           <Input value={dl} onChange={event => setDl(event.target.value)} />
         </FormControl>
 
         <Button
+          className="AddB"
           disabled={!input || !dl}
           type="submit"
           onClick={addTodo}
           variant="contained"
-          color="primary"
         >
           💪 Add Workouts{" "}
           {/**use disabled ={!input} to stop submiting " NOTHING" */}
         </Button>
       </form>
-
+      <div>
+        {" "}
+        <a>{GetDate()}</a>
+      </div>
       <ul className="Lists">
         {todos.map(todo => (
           <Workouts todo={todo} />
         ))}
       </ul>
+      <footer>
+        <IconButton className="footerB">
+          <ScrollToTop />
+        </IconButton>
+      </footer>
     </div>
   );
 }

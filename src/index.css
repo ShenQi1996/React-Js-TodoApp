@@ -2,8 +2,81 @@
   margin: 0;
   border: 0;
   padding: 0;
+  font-family: "Lemonada", cursive;
+}
+
+form {
+  padding-top: 20px;
 }
 
 .Lists {
-  margin: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 20%;
 }
+
+.Fcontrol {
+  margin: 20px !important;
+}
+
+.AddB {
+  margin-top: 30px !important;
+}
+/* Header Page */
+.frontP {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-image: url("https://chitowntrainer.com/wp-content/uploads/2017/09/choose-trainer.jpg");
+  background-position: center center;
+  background-size: cover;
+  color: aliceblue;
+  height: 600px;
+  object-fit: contain;
+  position: relative;
+}
+
+.frontP div {
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+.frontP h1 {
+  font-size: 70px;
+}
+
+.shadow {
+  height: 14.5rem;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+  bottom: 0;
+}
+/* Header Page */
+
+/* Footer Page */
+footer {
+  padding-bottom: 20px;
+}
+
+.footerB {
+  margin-top: 10px !important;
+}
+
+/* Footer Page */
+/* Body Page */
+body {
+}
+.profile {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.profile img {
+  width: 200px;
+  height: 220px;
+}
+/* Body Page */

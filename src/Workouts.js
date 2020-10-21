@@ -10,7 +10,6 @@ import {
 } from "@material-ui/core";
 
 import "./Workouts.css";
-import GetDate from "./GetDate";
 import db from "./firebase";
 import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 import { makeStyles } from "@material-ui/core/styles";
@@ -39,7 +38,7 @@ function Workouts(props) {
   const [input, setInput] = useState();
   const [dl, setDl] = useState();
 
-  const doDate = " ⌛ Do-Date : ";
+  const doDate = " ⌛ Sets: ";
   const handleOpen = () => {
     setOpen(true);
   };
@@ -75,13 +74,11 @@ function Workouts(props) {
           <div className={classes.paper}>
             <h1>I am working </h1>
             <input
-              className="iput1"
               placeholder={props.todo.Workout}
               value={input}
               onChange={event => setInput(event.target.value)}
             />
             <input
-              className="iput2"
               placeholder="enter your deadline"
               value={dl}
               onChange={event => setDl(event.target.value)}
@@ -99,19 +96,25 @@ function Workouts(props) {
           </div>
         </Fade>
       </Modal>
+
       <List className="All-List">
-        <div>{GetDate()}</div>
-        <ListItem className="L-Item">
-          <ListItemText className="L-text" primary={props.todo.Workout} />
-        </ListItem>
-        <Button onClick={e => setOpen(true) /** <--{handleOpen} same */}>
-          Edit Me😲
-        </Button>
-        <DeleteForeverIcon
-          onClick={event => {
-            db.collection("Workouts").doc(props.todo.id).delete();
-          }}
-        />
+        <div className="L-Text">
+          <ListItem>
+            <ListItemText primary={props.todo.Workout} />
+          </ListItem>
+          <Button
+            className="L-Button"
+            variant="contained"
+            onClick={e => setOpen(true) /** <--{handleOpen} same */}
+          >
+            Edit Me😲
+          </Button>
+          <DeleteForeverIcon
+            onClick={event => {
+              db.collection("Workouts").doc(props.todo.id).delete();
+            }}
+          />
+        </div>
       </List>
     </>
   );
